@@ -15,4 +15,4 @@ steps:
     displayName: Fly
   - script: echo "... to fight Imperium"
     displayName: Fight
-    condition: eq(lower(${{ parameters.fight }}), 'true')
+    condition: eq(lower('${{ parameters.fight }}'), 'true')
