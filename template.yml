@@ -1,0 +1,7 @@
+parameters:
+  - name: shipName
+    type: string
+    default: Millennium Falcon
+
+steps:
+  - script: ${{ shipName }} is flying to Tatooine
