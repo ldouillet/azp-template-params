@@ -26,3 +26,7 @@ steps:
     parameters:
       fight: $(fight)
   - template: template.yml
+  - template: template.yml
+    parameters:
+      planet: $(planet)
+      fight: $(fight)
