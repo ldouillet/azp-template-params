@@ -12,7 +12,7 @@ parameters:
 steps:
   - script: |
       echo "##vso[task.setvariable variable=fight]${{ parameters.fight }}"
-      echo "Fight: $[variables.fight]"
+      echo "Fight: $(fight)"
     displayName: Set variables
   - script: echo "${{ parameters.shipName }} is flying to ${{ parameters.planet }}"
     displayName: Fly
