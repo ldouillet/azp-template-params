@@ -4,4 +4,4 @@ parameters:
     default: Millennium Falcon
 
 steps:
-  - script: ${{ shipName }} is flying to Tatooine
+  - script: echo "${{ shipName }} is flying to Tatooine"
