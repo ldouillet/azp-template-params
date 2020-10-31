@@ -14,13 +14,13 @@ variables:
   fight: true
 
 steps:
-  - template: template.yml
-  - template: template.yml
-    parameters:
-      shipName: X-wing
-  - template: template.yml
-    parameters:
-      planet: $(planet)
+  # - template: template.yml
+  # - template: template.yml
+  #   parameters:
+  #     shipName: X-wing
+  # - template: template.yml
+  #   parameters:
+  #     planet: $(planet)
   - template: template.yml
     parameters:
       fight: $(fight)
