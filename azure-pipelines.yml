@@ -11,6 +11,7 @@ pool:
 
 variables:
   planet: Hoth
+  fight: true
 
 steps:
   - template: template.yml
@@ -20,3 +21,6 @@ steps:
   - template: template.yml
     parameters:
       planet: $(planet)
+  - template: template.yml
+    parameters:
+      fight: $(fight)

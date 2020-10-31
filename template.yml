@@ -12,5 +12,7 @@ parameters:
 
 steps:
   - script: echo "${{ parameters.shipName }} is flying to ${{ parameters.planet }}"
+    displayName: Fly
   - script: echo "... to fight Imperium"
+    displayName: Fight
     condition: ${{ parameters.fight }}
