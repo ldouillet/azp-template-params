@@ -5,6 +5,12 @@ parameters:
   - name: planet
     type: string
     default: Tatooine
+  - name: fight
+    type: boolean
+    default: false
+
 
 steps:
   - script: echo "${{ parameters.shipName }} is flying to ${{ parameters.planet }}"
+  - script: echo "... to fight Imperium"
+    condition: ${{ parameters.fight }}
