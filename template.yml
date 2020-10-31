@@ -2,6 +2,9 @@ parameters:
   - name: shipName
     type: string
     default: Millennium Falcon
+  - name: planet
+    type: string
+    default: Tatooine
 
 steps:
-  - script: echo "${{ parameters.shipName }} is flying to Tatooine"
+  - script: echo "${{ parameters.shipName }} is flying to ${{ parameters.planet }}"
