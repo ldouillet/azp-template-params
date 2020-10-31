@@ -9,10 +9,13 @@ parameters:
     type: string
     default: 'false'
 
+variables:
+  - name: fight
+    value: ${{ parameters.fight }}
 
 steps:
   - script: echo "${{ parameters.shipName }} is flying to ${{ parameters.planet }}"
     displayName: Fly
   - script: echo "... to fight Imperium"
     displayName: Fight
-    condition: eq(lower('${{ parameters.fight }}'), 'true')
+    condition: eq(lower($(fight)), 'true')

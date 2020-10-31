@@ -23,4 +23,4 @@ steps:
       planet: $(planet)
   - template: template.yml
     parameters:
-      fight: $[variables.fight]
+      fight: $(fight)
