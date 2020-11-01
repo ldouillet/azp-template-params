@@ -21,6 +21,15 @@
     runTask: ${{ eq(variables['Build.SourceBranchName'], 'main') }}
   ```
 
+The picture that follows shows the task being executed on the `main` branch:
+
+![main branch](branch-main.png)
+
+Below the conditional task was skipped because the pipeline is executed on
+`feature1` branch:
+
+![feature1 branch](branch-featre1.png)
+
 ## Explanation
 
 Azure Pipelines templates are processed when the pipeline YAML file is assembled
