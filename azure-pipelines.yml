@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - script: echo "Running on branch: ${{ variables['Build.SourceBranchName'] }}"
+  - script: echo "Running on branch ${{ variables['Build.SourceBranchName'] }}"
     displayName: "Branch: ${{ variables['Build.SourceBranchName'] }}"
   - template: template.yml
     parameters:
