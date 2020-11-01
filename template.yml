@@ -7,6 +7,6 @@ parameters:
     default: true
 
 steps:
-  - script: echo "Scenario - ${{ parameters.scenario }}"
-    displayName: "Execute on branches: ${{ parameters.scenario }}"
+  - script: echo "Run on ${{ parameters.scenario }}"
+    displayName: "Run on: ${{ parameters.scenario }}"
     condition: eq(${{ parameters.executeScenario }}, true)

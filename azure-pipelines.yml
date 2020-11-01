@@ -7,8 +7,8 @@ pool:
 steps:
   - template: template.yml
     parameters:
-      scenario: all
+      scenario: all branches
   - template: template.yml
     parameters:
-      scenario: main only
+      scenario: main branch only
       executeScenario: ${{ eq(variables['Build.SourceBranchName'], 'main') }}
