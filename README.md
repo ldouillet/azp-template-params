@@ -28,7 +28,7 @@ The picture that follows shows the task being executed on the `main` branch:
 Below the conditional task was skipped because the pipeline is executed on
 `feature1` branch:
 
-![feature1 branch](branch-featre1.png)
+![feature1 branch](branch-feature1.png)
 
 ## Explanation
 
