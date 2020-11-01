@@ -1,7 +1,7 @@
 parameters:
   - name: scenario
     type: string
-    default: 'Do it'
+    default: 'all'
   - name: executeScenario
     type: boolean
     default: true
