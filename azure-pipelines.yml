@@ -1,20 +1,23 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
-  - main
+  - '*'
+  # - main
 
 pool:
   vmImage: 'ubuntu-latest'
 
-variables:
-  planet: Hoth
-  fight: true
+# variables:
+  # planet: Hoth
+  # fight: true
   # mood: motivated
 
 steps:
+  - template: template.yml
+    parameters:
+      scenario: Execute always
+  - template: template.yml
+    parameters:
+      scenario: Execute only on main branch
+      executeScenario: ${{ eq(variables['Build.SourceBranchName'], 'main') }}
   # - template: template.yml
   # - template: template.yml
   #   parameters:
@@ -22,16 +25,16 @@ steps:
   # - template: template.yml
   #   parameters:
   #     planet: $(planet)
-  - template: template.yml
-  - template: template.yml
-    parameters:
-      # fight: ${{ variables.fight }}
-      fight: $(fight)
-  - template: template.yml
-  - template: template.yml
-    parameters:
-      planet: $(planet)
-      fight: ${{ variables.fight }}
+  # - template: template.yml
+  # - template: template.yml
+  #   parameters:
+  #     # fight: ${{ variables.fight }}
+  #     fight: $(fight)
+  # - template: template.yml
+  # - template: template.yml
+  #   parameters:
+  #     planet: $(planet)
+  #     fight: ${{ variables.fight }}
       # fight: $(fight)
   # - template: template.yml
   #   parameters:
