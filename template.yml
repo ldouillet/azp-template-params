@@ -8,4 +8,5 @@ parameters:
 
 steps:
   - script: echo "Scenario - ${{ parameters.scenario }}"
+    displayName: "Execute on branches: ${{ parameters.scenario }}"
     condition: eq(${{ parameters.executeScenario }}, true)
