@@ -12,7 +12,7 @@ pool:
 variables:
   planet: Hoth
   fight: true
-  mood: motivated
+  # mood: motivated
 
 steps:
   # - template: template.yml
@@ -25,12 +25,14 @@ steps:
   - template: template.yml
   - template: template.yml
     parameters:
-      fight: $(fight)
+      fight: ${{ variables.fight }}
+      # fight: $(fight)
   - template: template.yml
   - template: template.yml
     parameters:
       planet: $(planet)
-      fight: $(fight)
-  - template: template.yml
-    parameters:
-      fight: eq(variables.mood, 'motivated')
+      fight: ${{ variables.fight }}
+      # fight: $(fight)
+  # - template: template.yml
+  #   parameters:
+  #     fight: eq(variables.mood, 'motivated')
