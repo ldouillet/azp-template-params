@@ -25,5 +25,5 @@ steps:
   #   displayName: Fight
   #   condition: eq(lower('${{ parameters.fight }}'), 'true')
     # condition: eq(lower(variables.fightVar), 'true')
-  - script: echo "Scenario: ${{ parameters.scenario }}"
+  - script: echo "Scenario - ${{ parameters.scenario }}"
     condition: eq(${{ parameters.executeScenario }}, true)
