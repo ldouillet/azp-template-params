@@ -13,4 +13,4 @@ steps:
   - template: template.yml
     parameters:
       scenario: main branch only
-      executeScenario: ${{ eq(variables['Build.SourceBranchName'], 'main') }}
+      runTask: ${{ eq(variables['Build.SourceBranchName'], 'main') }}

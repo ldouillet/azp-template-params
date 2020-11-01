@@ -2,11 +2,11 @@ parameters:
   - name: scenario
     type: string
     default: 'all'
-  - name: executeScenario
+  - name: runTask
     type: boolean
     default: true
 
 steps:
   - script: echo "Run on ${{ parameters.scenario }}"
     displayName: "Run on: ${{ parameters.scenario }}"
-    condition: eq(${{ parameters.executeScenario }}, true)
+    condition: eq(${{ parameters.runTask }}, true)
